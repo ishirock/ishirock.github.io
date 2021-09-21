@@ -1,0 +1,24 @@
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+
+.title{
+    font-weight: bold;
+}
+
+
+.source-name {
+    margin-left:5px; 
+}
+
+
+.icon {
+    background-size: cover;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    background-color: #3f51b5;
+    color: white;
+}
