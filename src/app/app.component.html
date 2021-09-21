@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>apps</mat-icon>
+  </button>
+  <div>
+    <img mat-card-avatar src="assets/photos/ishan1-avatar.JPG" />
+  </div>
+  &nbsp;&nbsp;
+  <span>Ishirock</span>
+  <span class="menu-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="settingsMenu">
+    <mat-icon>settings</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu #settingsMenu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Help </button>
+</mat-menu>
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item routerLink="/photos" class="menu-item"> Photos </button>
+  <button mat-menu-item routerLink="/news" class="menu-item"> News </button>
+</mat-menu>
+
+<router-outlet></router-outlet>

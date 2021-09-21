@@ -1,0 +1,39 @@
+.card-picture {
+    max-width: 300px;
+    align-content: center;
+    align-items: center;
+  }
+
+.div-center {
+  align-content: center;
+}
+.card-image {
+    max-width: 100%;
+    align-self: center;
+    image-rendering: crisp-edges;
+    align-content: center;
+}
+
+.head-card{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  align-content: center;
+  vertical-align: top;
+  font-size: x-large;
+  border: 0px;
+}
+
+.drawer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+}
+
+.photos-card{
+  max-width: 50%;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+}
