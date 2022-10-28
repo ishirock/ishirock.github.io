@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class NewsApiService {
 
-  api_key = 'f1dddc9683474714b9604ee24e158184';
+  api_key = '7fcd8d9755c9434d8f1139dfbe14fe97';
 
   constructor(private http: HttpClient) { }
 
@@ -16,12 +16,12 @@ export class NewsApiService {
 
 
   newsArticles():Observable<any>{
-    const headers = new HttpHeaders().set("Ocp-Apim-Subscription-Key", "5f717f8b1ea648d3bb0f822619b35976");
+    const headers = new HttpHeaders().set("Ocp-Apim-Subscription-Key", this.api_key);
     return this.http.get(this.newsURl,{headers});
   }
 
   getBArticleByCategory(category: String):Observable<any>{
-    const headers = new HttpHeaders().set("Ocp-Apim-Subscription-Key", "5f717f8b1ea648d3bb0f822619b35976");
+    const headers = new HttpHeaders().set("Ocp-Apim-Subscription-Key", this.api_key);
     var url = this.newsURl + "?mkt=en-in&category="+category;
     console.log(url);
     return this.http.get(url, {headers});
