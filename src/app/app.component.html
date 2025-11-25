@@ -6,7 +6,7 @@
     <img mat-card-avatar src="assets/photos/ishan1-avatar.JPG" />
   </div>
   &nbsp;&nbsp;
-  <span>ishirock</span>
+  <span class="app-title">ishirock</span>
   <span class="menu-spacer"></span>
   <button mat-button [matMenuTriggerFor]="settingsMenu">
     <mat-icon>settings</mat-icon>
@@ -19,6 +19,7 @@
 <mat-menu #appMenu="matMenu">
   <button mat-menu-item routerLink="/photos" class="menu-item"> Photos </button>
   <button mat-menu-item routerLink="/news" class="menu-item"> News </button>
+  <button mat-menu-item routerLink="/cv" class="menu-item"> CV </button>
 </mat-menu>
 
 <router-outlet></router-outlet>

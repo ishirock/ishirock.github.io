@@ -1,0 +1,127 @@
+<mat-card class="head-card">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <mat-icon class="header-icon">person</mat-icon>
+    </div>
+    <mat-card-title>{{name}}</mat-card-title>
+  </mat-card-header>
+</mat-card>
+
+<div class="drawer-content">
+  <div class="cv-container fade-in">
+
+    <!-- Header Section -->
+    <header class="cv-header">
+      <h2 class="title">{{title}}</h2>
+      <div class="contact-info">
+        <span>{{location}}</span>
+        <span class="separator">•</span>
+        <a href="mailto:{{email}}">{{email}}</a>
+        <span class="separator">•</span>
+        <a href="https://{{linkedin}}" target="_blank">LinkedIn</a>
+        @if (phone) {
+        <span class="separator">•</span>
+        <span>{{phone}}</span>
+        }
+      </div>
+    </header>
+
+    <!-- Summary Section -->
+    <section class="cv-section">
+      <h3 class="section-title">Summary</h3>
+      <p class="summary-text">{{summary}}</p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Skills Section -->
+    <section class="cv-section">
+      <h3 class="section-title">Skills</h3>
+      <div class="skills-grid">
+        @for (skill of skills; track skill) {
+        <span class="skill-tag">{{skill}}</span>
+        }
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Experience Section -->
+    <section class="cv-section">
+      <h3 class="section-title">Experience</h3>
+      <div class="timeline">
+        @for (job of experience; track job.company) {
+        <div class="timeline-item">
+          <div class="job-header">
+            <h4 class="job-role">{{job.role}}</h4>
+            <span class="job-period">{{job.period}}</span>
+          </div>
+          <div class="job-sub-header">
+            <span class="job-company">{{job.company}}</span>
+            @if (job.location) {
+            <span class="separator">•</span>
+            <span class="job-location">{{job.location}}</span>
+            }
+          </div>
+          <ul class="job-description">
+            @for (point of job.description; track point) {
+            <li>{{point}}</li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Education Section -->
+    <section class="cv-section">
+      <h3 class="section-title">Education</h3>
+      <div class="education-list">
+        @for (edu of education; track edu.school) {
+        <div class="education-item">
+          <div class="edu-header">
+            <h4 class="edu-degree">{{edu.degree}}</h4>
+            <span class="edu-year">{{edu.year}}</span>
+          </div>
+          <div class="edu-school">{{edu.school}}</div>
+        </div>
+        }
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Languages Section -->
+    <section class="cv-section">
+      <h3 class="section-title">Languages</h3>
+      <div class="skills-grid">
+        @for (lang of languages; track lang) {
+        <span class="skill-tag">{{lang}}</span>
+        }
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Certifications Section -->
+    <section class="cv-section">
+      <h3 class="section-title">Certifications</h3>
+      <ul class="cert-list">
+        @for (cert of certifications; track cert) {
+        <li class="cert-item">{{cert}}</li>
+        }
+      </ul>
+    </section>
+
+    <!-- Footer / Home Link -->
+    <footer class="cv-footer">
+      <a routerLink="/" class="home-link">
+        <mat-icon>home</mat-icon>
+        Back to Home
+      </a>
+    </footer>
+
+  </div>
+</div>

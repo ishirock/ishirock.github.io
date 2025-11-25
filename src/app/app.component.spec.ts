@@ -1,12 +1,17 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+import { MaterialModule } from './material.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MaterialModule,
+        NoopAnimationsModule
       ],
       declarations: [
         AppComponent
@@ -26,10 +31,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ishirock');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ishirock!');
+    expect(compiled.querySelector('.app-title').textContent).toContain('ishirock');
   });
 });
