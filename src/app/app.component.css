@@ -1,15 +1,15 @@
 .menu-spacer {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 
-.title{
+.title {
     font-weight: bold;
 }
 
 
 .source-name {
-    margin-left:5px; 
+    margin-left: 5px;
 }
 
 
@@ -17,8 +17,15 @@
     background-size: cover;
 }
 
-.menu-item:hover{
+.menu-item:hover {
     cursor: pointer;
     background-color: #3f51b5;
     color: white;
+}
+
+img[mat-card-avatar] {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }

@@ -23,31 +23,26 @@ interface Education {
 export class CvComponent implements OnInit {
 
     name = 'Venkatesh Ramakrishnaiah';
-    title = 'Director at Alvarez and Marsal | Digital and Technology Services';
+    title = 'Technology Leader';
     email = 'venkatesh.br@gmail.com';
     linkedin = 'linkedin.com/in/venkateshbr';
     phone = '+65 96316235';
     location = 'Singapore';
 
-    summary = `Distinguished IT and Digital transformation leader with over 22 years of experience. Rich background in IT strategy & Architecture, Due Diligence, Performance improvement, Carve-outs and Integration across Industry sectors.
-    Currently serving as the Director for Digital & Technology Services at Alvarez and Marsal Southeast Asia leading IT Strategy & Roadmap, IT Due Diligence, Carveouts and Integration.
+    summary = `I am an IT and Digital transformation leader with over 22 years of experience. Rich background in IT strategy & Architecture, Due Diligence, Performance improvement, Carve-outs and Integration across Industry sectors.
+    Currently serving as the Director for Digital & Technology Services at Alvarez and Marsal Southeast Asia leading IT Strategy & Roadmap, Pre deal Due Diligence, Carveouts and Integration.
     Have held pivotal roles in the past, including Chief Technologist/CTO at DXC Asia and Director of Digital Engineering at Cognizant.
     Previously, I've established and managed Centers of Excellence concentrating on Cloud, IoT, Blockchain, and AI/ML technologies for the purpose of pioneering and prototyping advanced solutions.
     I have envisioned, designed, and directed engineering teams in creating innovative products such as a highly prosperous multi-tenant, cloud-native public procurement platform and a versatile, multi-tenant, cloud native biometric identity platform.`;
 
     skills: string[] = [
-        'IT Transformation',
-        'Enterprise Architecture',
-        'Cloud Computing',
         'IT Strategy',
         'Digital Transformation',
-        'Solution Architecture',
-        'Agile Methodologies',
-        'DevOps',
-        'Microservices',
-        'IoT',
-        'Blockchain',
-        'AI/ML'
+        'IT Operating Model Design',
+        'Enterprise Architecture',
+        'Data & AI Strategy',
+        'Cloud Transformation',
+        'Agile / DevOps Transformation'
     ];
 
     languages: string[] = [
@@ -58,6 +53,7 @@ export class CvComponent implements OnInit {
 
     certifications: string[] = [
         'ITILv3 Foundation',
+        'TOGAF',
         'COBIT',
         'Developing Applications with Google Cloud Specialization',
         'Developing APIs with Google Cloud\'s Apigee API Platform Specialization'
@@ -204,6 +200,10 @@ export class CvComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
+    }
+
+    scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
 }
